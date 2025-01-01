@@ -51,14 +51,14 @@ html, body {
 
 /* HERO */
 .hero {
-  min-height: 100vh; 
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 0 1rem;
   background: linear-gradient(to bottom right, #e5e5e5, #b9b9b9);
-  margin-top: 4rem; /* so hero text isn't hidden by navbar */
+  margin-top: 4rem; /* ensures content isn't hidden behind the navbar */
   position: relative;
 }
 
@@ -68,11 +68,12 @@ html, body {
 
 /* HERO IMAGE */
 .hero-img {
-  width: 150px; 
+  width: 150px;
   height: 150px;
-  border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -104,6 +105,7 @@ html, body {
   font-weight: 600;
   transition: background-color 0.3s;
 }
+
 .btn:hover {
   background-color: #005bb5;
 }
