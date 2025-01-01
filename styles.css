@@ -70,6 +70,9 @@ html, body {
   height: 100vh;
   padding: 0 20px;
   background: #f6f8fa;
+  /* Make sure the hero text is above any fixed nav elements */
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
