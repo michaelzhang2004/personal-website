@@ -2,92 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Michael Zhang's personal site" />
+  <meta name="description" content="Personal Website of Michael Zhang" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michael Zhang - City Theme</title>
+  <title>Michael Zhang</title>
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- SOCIAL ICONS (top-left) -->
-  <div class="social-links">
-    <!-- Replace # with your actual profile links -->
-    <a href="#" target="_blank" rel="noreferrer">
-      <img src="icons/linkedin.svg" alt="LinkedIn" />
-    </a>
-    <a href="#" target="_blank" rel="noreferrer">
-      <img src="icons/github.svg" alt="GitHub" />
-    </a>
-    <a href="#" target="_blank" rel="noreferrer">
-      <img src="icons/instagram.svg" alt="Instagram" />
-    </a>
-  </div>
-
-  <!-- MAIN NAV (top-right) -->
-  <nav class="main-nav">
-    <ul>
-      <li><a href="#about">about</a></li>
-      <li><a href="#projects">projects</a></li>
-      <li><a href="#skills">skills</a></li>
-      <li><a href="#contact">contact</a></li>
-      <li><a href="resume.pdf" target="_blank">resume</a></li>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="#home">Michael Zhang</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <!-- Link to your resume; make sure resume.pdf is in the root folder -->
+      <li><a href="resume.pdf" target="_blank" class="resume-btn">Resume</a></li>
     </ul>
   </nav>
 
-  <!-- HERO SECTION -->
-  <header class="hero fade-in">
+  <!-- Hero Section -->
+  <header id="home" class="hero fade-in">
     <div class="hero-content">
-      <h1>hi, i’m michael!</h1>
-      <p>software developer · cs student · tech enthusiast</p>
-      <a href="#about" class="hero-btn">follow my career →</a>
+      <h1>Hello, I'm <span>Michael Zhang</span></h1>
+      <p>Aspiring Software Engineer & Tech Enthusiast</p>
+      <a href="#about" class="btn">Explore My World</a>
     </div>
   </header>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="fade-in">
-    <h2>about</h2>
+  <!-- About Section -->
+  <section id="about" class="about fade-in">
+    <h2>About Me</h2>
     <p>
-      I’m a software developer and computer science student specializing in building 
-      applications that blend creativity with robust engineering principles.
+      I'm a Computer Science student at Georgia Tech focusing on software engineering 
+      and data science. Passionate about building solutions that blend creativity 
+      with strong technical foundations.
+    </p>
+    <p>
+      Currently learning advanced algorithms, exploring machine learning, 
+      and creating fun side projects on Android. 
     </p>
   </section>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projects" class="fade-in">
-    <h2>projects</h2>
-    <p>
-      Showcase your favorite projects here. For example:
-    </p>
-    <ul>
-      <li>Coin Dash – A 2D arcade game built with C and Docker.</li>
-      <li>Spotify Wrapped – A Kotlin/Android app integrating Firebase Auth and the Spotify API.</li>
-      <li>College Scheduler – An Android app for managing academic schedules.</li>
-    </ul>
+  <!-- Projects Section -->
+  <section id="projects" class="projects fade-in">
+    <h2>My Projects</h2>
+    <div class="project-card">
+      <h3>Coin Dash</h3>
+      <p>
+        A 2D arcade game built with C and Docker, inspired by retro Gameboy Advance games.
+        <strong>Tech Used:</strong> C, Docker, SDL2
+      </p>
+    </div>
+    <div class="project-card">
+      <h3>Spotify Wrapped App</h3>
+      <p>
+        A custom Kotlin/Android app integrating Firebase Auth, Spotify API, and Glide 
+        to provide music listening statistics similar to Spotify Wrapped.
+        <strong>Tech Used:</strong> Kotlin, Android, Firebase
+      </p>
+    </div>
+    <div class="project-card">
+      <h3>College Scheduler</h3>
+      <p>
+        An Android app for managing academic schedules efficiently with 
+        automatic scheduling, assignment tracking, and custom notifications.
+        <strong>Tech Used:</strong> Java, Android, SQLite
+      </p>
+    </div>
   </section>
 
-  <!-- SKILLS SECTION -->
-  <section id="skills" class="fade-in">
-    <h2>skills</h2>
+  <!-- Contact Section -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
     <p>
-      Java, Kotlin, C, Android development, Docker, Machine Learning fundamentals... 
-      Plus any other key technologies you want to highlight.
-    </p>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="fade-in">
-    <h2>contact</h2>
-    <p>
-      Interested in working together or have any questions?
+      Interested in collaborating or have any questions? Let’s chat!
     </p>
     <ul>
       <li>Email: <a href="mailto:mzhang664@gatech.edu">mzhang664@gatech.edu</a></li>
-      <li>LinkedIn: <a href="#" target="_blank">linkedin.com/in/mzhang664</a></li>
-      <li>GitHub: <a href="#" target="_blank">github.com/michaelzhang2004</a></li>
+      <li>LinkedIn: <a href="https://linkedin.com/in/mzhang664" target="_blank" rel="noreferrer">linkedin.com/in/mzhang664</a></li>
+      <li>GitHub: <a href="https://github.com/michaelzhang2004" target="_blank" rel="noreferrer">github.com/michaelzhang2004</a></li>
     </ul>
   </section>
 
-  <!-- SCRIPTS -->
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Michael Zhang. Built with ❤️ using HTML, CSS, and JS.</p>
+  </footer>
+
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
