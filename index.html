@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Personal Website of Michael Zhang" />
+  <meta name="description" content="Michael Zhang's Personal Website" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Michael Zhang</title>
   <!-- Link to CSS -->
@@ -10,90 +10,212 @@
 </head>
 <body>
 
-  <!-- Navigation (fixed to top) -->
+  <!-- NAVBAR -->
   <nav class="navbar">
-    <div class="nav-brand">
-      <a href="#home">Michael Zhang</a>
-    </div>
+    <div class="nav-brand">Michael Zhang</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
-      <!-- Link to your resume; place resume.pdf in the same folder or update path -->
-      <li><a href="resume.pdf" target="_blank" class="resume-btn">Resume</a></li>
+      <li><a href="resume.pdf" target="_blank">Resume</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <header id="home" class="hero fade-in">
+  <!-- HERO -->
+  <header class="hero fade-in">
     <div class="hero-content">
+      <!-- Add your photo here -->
+      <img 
+        src="profile.JPG" 
+        alt="Michael Zhang" 
+        class="hero-img"
+      />
       <h1>Hello, I'm <span>Michael Zhang</span></h1>
       <p>Aspiring Software Engineer & Tech Enthusiast</p>
       <a href="#about" class="btn">Explore My World</a>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="about fade-in">
-    <h2>About Me</h2>
-    <p>
-      I'm a Computer Science student at Georgia Tech focusing on software engineering 
-      and data science. Passionate about building solutions that blend creativity 
-      with strong technical foundations.
-    </p>
-    <p>
-      Currently learning advanced algorithms, exploring machine learning, 
-      and creating fun side projects on Android. 
-    </p>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects fade-in">
-    <h2>My Projects</h2>
-    <div class="project-card">
-      <h3>Coin Dash</h3>
+  <main>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section fade-in">
+      <h2>About Me</h2>
       <p>
-        A 2D arcade game built with C and Docker, inspired by retro Gameboy Advance games.
-        <strong>Tech Used:</strong> C, Docker, SDL2
+        I’m a Computer Science student at Georgia Tech, focusing on software 
+        engineering and data science. Passionate about creating solutions that blend
+        creativity with robust technical foundations, I’ve been honing my skills 
+        in advanced algorithms, exploring machine learning, and developing a range 
+        of Android projects.
       </p>
-    </div>
-    <div class="project-card">
-      <h3>Spotify Wrapped App</h3>
       <p>
-        A custom Kotlin/Android app integrating Firebase Auth, Spotify API, and Glide 
-        to provide music listening statistics similar to Spotify Wrapped.
-        <strong>Tech Used:</strong> Kotlin, Android, Firebase
+        I believe in continuous learning and pushing myself to tackle new challenges,
+        whether it’s through research internships, collaborative projects, or 
+        open-source contributions. When I'm not coding, you can find me exploring 
+        tech blogs, building personal side projects, or fiddling with UI/UX design.
       </p>
-    </div>
-    <div class="project-card">
-      <h3>College Scheduler</h3>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section fade-in">
+      <h2>Experience</h2>
+
+      <!-- Research Intern -->
+      <div class="experience-card">
+        <h3>Research Intern</h3>
+        <p class="company-dates">
+          Texas Southern University | Jun. 2024 – Aug. 2024 | Houston, TX
+        </p>
+        <ul>
+          <li>
+            Researched Stochastic Dynamic Programming, focusing on decision-making 
+            under uncertainty.
+          </li>
+          <li>
+            Applied linear programming and policy improvement techniques to real-world 
+            problems like job offers, stock investments, and gambling strategies.
+          </li>
+          <li>
+            Modeled and analyzed decision-making processes, improving team 
+            strategies and decision frameworks.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Data Science Intern -->
+      <div class="experience-card">
+        <h3>Data Science Intern</h3>
+        <p class="company-dates">
+          Baylor College of Medicine | May 2023 – Aug. 2023 | Houston, TX
+        </p>
+        <ul>
+          <li>
+            Utilized Seurat (R) to visualize and analyze data on aging in fruit flies, 
+            producing clear infographics and data tables.
+          </li>
+          <li>
+            Applied bioinformatics algorithms like PCA and specialized data structures 
+            to simplify complex datasets.
+          </li>
+          <li>
+            Collaborated with researchers to design and launch a website showcasing 
+            findings and data from the Aging Fly Cell Atlas Project.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section fade-in">
+      <h2>Projects</h2>
+
+      <!-- Coin Dash -->
+      <div class="project-card">
+        <h3>Coin Dash <span>| C, Docker</span></h3>
+        <p>
+          <strong>Description:</strong> A 2D arcade game in C, inspired by retro 
+          Gameboy Advance mechanics.
+        </p>
+        <ul>
+          <li>
+            Implemented dynamic obstacle avoidance and progressively larger coins 
+            to enhance gameplay difficulty.
+          </li>
+          <li>
+            Used Docker for efficient testing and deployment, ensuring cross-platform 
+            compatibility.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Spotify Wrapped -->
+      <div class="project-card">
+        <h3>Spotify Wrapped <span>| Java, Kotlin, Android SDK, Android Studio, Git, Firebase</span></h3>
+        <p>
+          <strong>Description:</strong> An Android app using the Spotify API in which 
+          users can view their music listening statistics across different time ranges.
+        </p>
+        <ul>
+          <li>
+            Implemented Firebase Authentication for secure cross-device user 
+            authentication and real-time data sync.
+          </li>
+          <li>
+            Features custom summary screens, interactive games, and a visually 
+            appealing interface that mimics the official Spotify Wrapped experience.
+          </li>
+        </ul>
+      </div>
+
+      <!-- College Scheduler -->
+      <div class="project-card">
+        <h3>College Scheduler <span>| Java, Android SDK, Android Studio</span></h3>
+        <p>
+          <strong>Description:</strong> An Android app aimed at helping college 
+          students efficiently manage their academic schedules.
+        </p>
+        <ul>
+          <li>
+            Implemented essential features allowing users to add classes, track 
+            assignments and deadlines, and maintain a comprehensive to-do list.
+          </li>
+          <li>
+            Utilized Android SDK and Java for a robust front-end structure, with 
+            local data storage for offline functionality.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section fade-in">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Languages:</strong> Java, Python, C/C++, SQL, JavaScript, R</li>
+        <li><strong>Tools/Frameworks:</strong> Git, Docker, React, Node.js, Express.js, 
+          Angular, Flutter, Android Studio, Django, Firebase
+        </li>
+        <li><strong>Concepts:</strong> Data Structures & Algorithms, Machine Learning, 
+          UI/UX, Cloud Deployments
+        </li>
+      </ul>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section fade-in">
+      <h2>Contact</h2>
       <p>
-        An Android app for managing academic schedules efficiently with 
-        automatic scheduling, assignment tracking, and custom notifications.
-        <strong>Tech Used:</strong> Java, Android, SQLite
+        Have questions, or interested in collaborating? Let’s get in touch! 
       </p>
-    </div>
-  </section>
+      <ul class="contact-info">
+        <li><strong>Phone:</strong> 832-503-6251</li>
+        <li>
+          <strong>Email:</strong> 
+          <a href="mailto:mzhang664@gatech.edu">mzhang664@gatech.edu</a>
+        </li>
+        <li>
+          <strong>LinkedIn:</strong> 
+          <a href="https://linkedin.com/in/mzhang664" target="_blank">
+            linkedin.com/in/mzhang664
+          </a>
+        </li>
+        <li>
+          <strong>GitHub:</strong> 
+          <a href="https://github.com/michaelzhang2004" target="_blank">
+            github.com/michaelzhang2004
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact fade-in">
-    <h2>Contact Me</h2>
-    <p>
-      Interested in collaborating or have any questions? Let’s chat!
-    </p>
-    <ul>
-      <li>Email: <a href="mailto:mzhang664@gatech.edu">mzhang664@gatech.edu</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/mzhang664" target="_blank" rel="noreferrer">linkedin.com/in/mzhang664</a></li>
-      <li>GitHub: <a href="https://github.com/michaelzhang2004" target="_blank" rel="noreferrer">github.com/michaelzhang2004</a></li>
-    </ul>
-  </section>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2024 Michael Zhang. Built with ❤️ using HTML, CSS, and JS.</p>
+    <p>&copy; 2025 Michael Zhang. Built with ❤️ using HTML, CSS, and JS.</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>

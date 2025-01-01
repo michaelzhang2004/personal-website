@@ -1,193 +1,206 @@
-/* Basic Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BASIC TYPOGRAPHY */
 html, body {
-  scroll-behavior: smooth;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #fff;
+  background-color: #fdfdfd;
   color: #333;
+  scroll-behavior: smooth;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #111;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 0.8rem 2rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  padding: 1rem 2rem;
   z-index: 999;
 }
 
-.nav-brand a {
-  font-size: 1.3rem;
-  color: #333;
-  text-decoration: none;
-  font-weight: 700;
+.nav-brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.nav-links li {
-  margin-left: 0;
-}
-
-.nav-links a {
+.nav-links li a {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
 }
 
-.nav-links a:hover {
-  background: #f0f0f0;
+.nav-links li a:hover {
+  opacity: 0.7;
 }
 
-.resume-btn {
-  font-weight: 600;
-  color: #0073e6;
-}
-
-/* Hero Section */
+/* HERO */
 .hero {
+  min-height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  padding: 0 20px;
-  background: #f6f8fa;
-  /* Make sure the hero text is above any fixed nav elements */
+  text-align: center;
+  padding: 0 1rem;
+  background: linear-gradient(to bottom right, #e5e5e5, #b9b9b9);
+  margin-top: 4rem; /* so hero text isn't hidden by navbar */
   position: relative;
-  z-index: 1;
 }
 
 .hero-content {
-  text-align: center;
-  max-width: 700px;
+  max-width: 600px;
+}
+
+/* HERO IMAGE */
+.hero-img {
+  width: 150px; 
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
-  color: #000;
+  color: #111;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .hero-content h1 span {
-  color: #0073e6; /* Accent color */
+  color: #0073e6; /* highlight color */
 }
 
 .hero-content p {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  color: #555;
+  color: #444;
 }
 
 .btn {
-  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
   background-color: #0073e6;
-  border: none;
-  border-radius: 4px;
   color: #fff;
-  font-weight: 600;
   text-decoration: none;
-  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
   transition: background-color 0.3s;
 }
-
 .btn:hover {
   background-color: #005bb5;
 }
 
-/* Section Styling */
-section {
-  padding: 80px 20px;
+/* SECTIONS */
+.section {
+  width: 90%;
   max-width: 800px;
   margin: 0 auto;
+  padding: 80px 0;
 }
 
-/* About Section */
-.about h2,
-.projects h2,
-.contact h2 {
-  font-size: 1.75rem;
+.section h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
+  color: #0073e6;
+  font-weight: 600;
+}
+
+.section p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* EXPERIENCE CARDS */
+.experience-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.experience-card h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.company-dates {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
   color: #0073e6;
 }
 
-.about p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-/* Projects Section */
+/* PROJECT CARDS */
 .project-card {
   background: #fff;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
 .project-card h3 {
   margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.project-card h3 span {
+  font-size: 0.9rem;
   color: #0073e6;
+  font-weight: normal;
+  margin-left: 0.5rem;
 }
 
-/* Contact Section */
-.contact p {
-  margin-bottom: 1rem;
-  color: #555;
+/* SKILLS */
+.skills-list {
+  margin-left: 1.5rem;
+  list-style: square;
 }
 
-.contact ul {
-  list-style: none;
+/* CONTACT */
+.contact-info {
   margin-top: 1rem;
+  list-style: none;
 }
-
-.contact li {
+.contact-info li {
   margin-bottom: 0.5rem;
 }
 
-.contact a {
-  color: #0073e6;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
+/* FOOTER */
 .footer {
   text-align: center;
-  padding: 20px;
-  background: #f8f9fa;
-  color: #888;
+  background: #111;
+  color: #bbb;
+  padding: 1rem;
   font-size: 0.9rem;
-  margin-top: 2rem;
 }
 
-/* Fade-In Animation (initially hidden) */
+/* FADE-IN ANIMATION */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.8s ease-out;
 }
-
 .fade-in.appear {
   opacity: 1;
   transform: translateY(0);
