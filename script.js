@@ -1,21 +1,18 @@
-// Select all elements with the 'fade-in' class
+// Fade-in animation using Intersection Observer
 const faders = document.querySelectorAll('.fade-in');
 
 const appearOptions = {
-  threshold: 0.1,
+  threshold: 0.1, // triggers when 10% of the element is visible
 };
 
 const appearOnScroll = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    // Add class 'appear' once visible
     entry.target.classList.add('appear');
-    // Unobserve after it appears
     observer.unobserve(entry.target);
   });
 }, appearOptions);
 
-// Observe each fade-in section
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
